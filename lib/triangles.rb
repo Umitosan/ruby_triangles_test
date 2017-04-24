@@ -11,4 +11,8 @@ class Triangles
      ((@side1 == @side2) && (@side1 == @side3))
   end
 
+  define_method(:isosceles?) do
+     ((@side1 == @side2) || (@side1 == @side3) || (@side2 == @side3))
+  end
+
 end
