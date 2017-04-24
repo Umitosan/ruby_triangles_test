@@ -6,16 +6,30 @@ require "pry"
 describe 'Triangles' do
 
   describe('#equilateral?') do
-    it("returns the length property of the object") do
+    it("returns true if equilateral") do
       new_triangle = Triangles.new(2,2,2)
       expect(new_triangle.equilateral?()).to(eq(true))
     end
   end
 
   describe('#isosceles?') do
-    it("returns the length property of the object") do
+    it("returns true if isosceles") do
       new_triangle = Triangles.new(2,3,3)
       expect(new_triangle.isosceles?()).to(eq(true))
+    end
+  end
+
+  describe('#scalene?') do
+    it("returns true if scalene") do
+      new_triangle = Triangles.new(2,3,4)
+      expect(new_triangle.scalene?()).to(eq(true))
+    end
+  end
+
+  describe('#is_triangle?') do
+    it("returns false if not a triangle") do
+      new_triangle = Triangles.new(2,3,10)
+      expect(new_triangle.is_triangle?()).to(eq(false))
     end
   end
 
