@@ -1,9 +1,14 @@
-# example ruby code
 
-# class Palindrome
+class Triangles
 
-#   def is_word?(user_input)
-#     user_input.match?(/[aeiouy]+/i)
-#   end
+  define_method(:initialize) do |side1, side2, side3|
+    @side1 = side1
+    @side2 = side2
+    @side3 = side3
+  end
 
-# end
+  define_method(:equilateral?) do
+     ((@side1 == @side2) && (@side1 == @side3))
+  end
+
+end

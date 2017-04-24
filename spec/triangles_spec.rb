@@ -3,15 +3,17 @@ require "rspec"
 require "pry"
 
 
-describe 'Palindrome#isWord?' do
-  let(:word) { Palindrome.new }
+describe 'Triangles' do
 
-  it "returns true if the word has at least one vowel" do
-    expect(word.is_word?("word")).to eq true
+  describe('#equilateral') do
+
+    it("returns the length property of the object") do
+      new_triangle = Triangles.new(2,2,2)
+      expect(new_triangle.equilateral?()).to(eq(true))
+    end
+
   end
-
 end
-
 
 
 # equilateral: all sides are equal;
